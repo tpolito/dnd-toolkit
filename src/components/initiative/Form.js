@@ -1,5 +1,5 @@
 import React, { useState, Fragment, useContext } from 'react';
-import InitContext from '../../context/initContext';
+import InitContext from '../../context/init/initContext';
 
 const Form = () => {
   // State

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import InitContext from '../../context/initContext';
+import InitContext from '../../context/init/initContext';
 import PropTypes from 'prop-types';
 
 const CharacterItem = ({ combatant }) => {

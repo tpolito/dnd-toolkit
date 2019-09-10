@@ -13,7 +13,7 @@ import './App.css';
 import M from 'materialize-css';
 import 'materialize-css/dist/css/materialize.min.css';
 
-import InitState from './context/InitState';
+import InitState from './context/init/InitState';
 
 const App = () => {
   // MaterialCSS Init
