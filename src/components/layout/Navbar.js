@@ -15,6 +15,15 @@ const Navbar = () => {
         </li>
         <li className="divider" />
       </ul>
+      <ul id="dropdown2" className="dropdown-content">
+        <li>
+          <a href="/init">Initiative</a>
+        </li>
+        <li>
+          <a href="/npc-gen">NPC Generator</a>
+        </li>
+        <li className="divider" />
+      </ul>
       <nav className="blue darken-1" style={{ marginBottom: '30px' }}>
         <div className="nav-wrapper">
           <a href="/" className="brand-logo center">
@@ -22,7 +31,10 @@ const Navbar = () => {
           </a>
           <ul id="nav-mobile" className="right hide-on-medium-and-down">
             <li>
-              <a href="/init">Initiative</a>
+              <a className="dropdown-trigger" href="#!" data-target="dropdown2">
+                Initiative
+                <i className="material-icons right">arrow_drop_down</i>
+              </a>
             </li>
             <li>
               <a className="dropdown-trigger" href="#!" data-target="dropdown1">

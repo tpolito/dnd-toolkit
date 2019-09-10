@@ -8,6 +8,7 @@ import Spells from './components/pages/Spells';
 import SpellDesc from './components/pages/SpellDesc';
 import Conditions from './components/pages/Conditions';
 import Home from './components/pages/Home';
+import NPCGen from './components/npcgen/NPCGen';
 
 import './App.css';
 import M from 'materialize-css';
@@ -33,6 +34,7 @@ const App = () => {
               <Route exact path="/about" component={About} />
               <Route exact path="/ref" component={Reference} />
               <Route exact path="/conditions" component={Conditions} />
+              <Route exact path="/npc-gen" component={NPCGen} />
               <Route exact path="/spells/:page" component={Spells} />
               <Route exact path="/spells/desc/:slug" component={SpellDesc} />
             </div>
