@@ -5,7 +5,9 @@ const NPCGen = () => {
   // Get a random number
   let random = Math.floor(Math.random() * 4);
   // Log a Elf First and Last Name
-  console.log(`${data.elf.mFirstName[random]} ${data.elf.mLastName[random]} `);
+  console.log(
+    `${data.elf.mFirstName[random]} ${data.elf.elfLastName[random]} `
+  );
   return (
     <div>
       <h1>NPC Name Generator</h1>

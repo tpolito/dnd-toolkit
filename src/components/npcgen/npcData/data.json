@@ -1,8 +1,7 @@
 {
   "elf": {
     "mFirstName": ["Adran", "Aelar", "Laucian", "Himo"],
-    "mLastName": ["Amakiir", "Liadon", "Nailo", "Siannodel"],
     "fFirstName": [],
-    "fLastName": []
+    "elfLastName": ["Amakiir", "Liadon", "Nailo", "Siannodel"]
   }
 }
