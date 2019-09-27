@@ -24,7 +24,8 @@ const NPCGen = () => {
   // Get a random name from the data
   const getRandomName = () => {
     getRandomNum(4);
-    name = `${elf.fFirstName[random]} ${elf.elfLastName[random]}`;
+    // Set name state value to
+    setName(`${elf.fFirstName[random]} ${elf.elfLastName[random]}`);
 
     console.log(name);
   };
