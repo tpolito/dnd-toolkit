@@ -3,15 +3,15 @@ import data from './npcData/data.json';
 
 const NPCGen = () => {
   // State
-  const [gender, setGender] = useState('');
+  const [NPC, setNPC] = useState({
+    gender: '',
+    race: ''
+  });
   const [name, setName] = useState('');
-
-  // Deconstruct
-  const { elf } = data;
 
   // onChange Handle
   const onChange = e => {
-    setGender({ ...gender, [e.target.name]: e.target.value });
+    setNPC({ ...NPC, [e.target.name]: e.target.value });
   };
 
   // Set random number interval
@@ -20,31 +20,53 @@ const NPCGen = () => {
   const getRandomNum = num => {
     random = Math.floor(Math.random() * num);
   };
+  // Deconstruct NPC Object
+  const { gender, race } = NPC;
 
   // Get a random name from the data
   const getRandomName = () => {
-    getRandomNum(4);
-    // Set name state value to
-    setName(`${elf.fFirstName[random]} ${elf.elfLastName[random]}`);
-
-    console.log(name);
+    let previousName = '';
+    if (race === '' || gender === '') {
+      alert('Please select and option from all fields');
+    } else {
+      getRandomNum(data[race][gender].length - 1);
+      setName(`${data[race][gender][random]} ${data[race].lastName[random]}`);
+    }
   };
+
   return (
     <div>
       <h4 className="center">NPC Name Generator</h4>
       <div className="center">
         <div className="input-field">
           <select
-            name="type"
+            name="gender"
             value={gender}
             className="browser-default"
             onChange={onChange}
+            required
           >
             <option value="" disabled>
-              Select Gender of Character
+              Select Gender of NPC
             </option>
             <option value="m">Male</option>
             <option value="f">Female</option>
+          </select>
+        </div>
+        <div className="input-field">
+          <select
+            name="race"
+            value={race}
+            className="browser-default"
+            onChange={onChange}
+            required
+          >
+            <option value="" disabled>
+              Select Race of NPC
+            </option>
+            <option value="elf">Elf</option>
+            <option value="dwarf">Dwarf</option>
+            <option value="gnome">Gnome</option>
           </select>
         </div>
         <button

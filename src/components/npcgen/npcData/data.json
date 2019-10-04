@@ -1,7 +1,17 @@
 {
   "elf": {
-    "mFirstName": ["Adran", "Aelar", "Laucian", "Himo"],
-    "fFirstName": ["Adrie", "Lia", "Naivara", "Riardon"],
-    "elfLastName": ["Amakiir", "Liadon", "Nailo", "Siannodel"]
+    "m": ["Adran", "Aelar", "Laucian", "Himo"],
+    "f": ["Adrie", "Lia", "Naivara", "Riardon"],
+    "lastName": ["Amakiir", "Liadon", "Nailo", "Siannodel"]
+  },
+  "dwarf": {
+    "m": ["Orsik", "Oskar", "Rurik", "Thorin"],
+    "f": ["Amber", "Mardred", "Sannl", "Vistra"],
+    "lastName": ["Lutgehr", "Torunn", "Frostbeard", "Gorunn"]
+  },
+  "gnome": {
+    "m": ["Orryn", "Alvyn", "Zook", "Eldon"],
+    "f": ["Nyx", "Oda", "Shamil", "Tana"],
+    "lastName": ["Beren", "Cloak", "Ku", "Nim"]
   }
 }
