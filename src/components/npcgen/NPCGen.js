@@ -12,26 +12,30 @@ const NPCGen = () => {
   // onChange Handle
   const onChange = e => {
     setNPC({ ...NPC, [e.target.name]: e.target.value });
+    console.log(NPC);
   };
 
-  // Set random number interval
-  let random = 0;
-  // Get a random number
-  const getRandomNum = num => {
-    random = Math.floor(Math.random() * num);
-  };
   // Deconstruct NPC Object
   const { gender, race } = NPC;
 
   // Get a random name from the data
   const getRandomName = () => {
-    let previousName = '';
+    let firstNum = Math.floor(Math.random() * data[race][gender].length);
+    let secondNum = Math.floor(Math.random() * data[race].lastName.length);
+
     if (race === '' || gender === '') {
       alert('Please select and option from all fields');
     } else {
-      getRandomNum(data[race][gender].length - 1);
-      setName(`${data[race][gender][random]} ${data[race].lastName[random]}`);
+      setName(
+        `${data[race][gender][firstNum]} ${data[race].lastName[secondNum]}`
+      );
     }
+
+    console.log(`${firstNum} + ${secondNum}`);
+  };
+
+  const debug = () => {
+    console.log(NPC);
   };
 
   return (
@@ -67,6 +71,7 @@ const NPCGen = () => {
             <option value="elf">Elf</option>
             <option value="dwarf">Dwarf</option>
             <option value="gnome">Gnome</option>
+            <option value="halfling">Halfling</option>
           </select>
         </div>
         <button
@@ -75,8 +80,11 @@ const NPCGen = () => {
         >
           Generate An NPC
         </button>
+        <button onClick={debug} className="waves-effect waves-light btn-large">
+          Debug
+        </button>
         <div>
-          <p>{name}</p>
+          <h4>{name}</h4>
         </div>
       </div>
     </div>

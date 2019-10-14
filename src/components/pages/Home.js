@@ -44,6 +44,20 @@ const Home = () => {
               </div>
             </div>
           </div>
+          <div className="card">
+            <div class="card blue darken-1">
+              <div class="card-content white-text">
+                <span class="card-title">NPC Generator</span>
+                <hr />
+                <p>Generate simple NPC names based on Race & Sex!</p>
+              </div>
+              <div className="card-action">
+                <a href="/npc-gen" class="white-text">
+                  Click me to check it out!
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

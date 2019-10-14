@@ -18,6 +18,18 @@ const InitState = props => {
       //   name: 'Big Evil Bad Guy',
       //   count: '12',
       //   type: 'NPC'
+      // },
+      // {
+      //   id: 3,
+      //   name: 'Henchman',
+      //   count: '9',
+      //   type: 'NPC'
+      // },
+      // {
+      //   id: 4,
+      //   name: 'Effie',
+      //   count: '1',
+      //   type: 'PC'
       // }
     ]
   };

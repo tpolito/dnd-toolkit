@@ -23,7 +23,9 @@ const InitiativeDisplay = () => {
           <span
             style={{ cursor: 'pointer' }}
             onClick={clearAll}
-            className="secondary-content"
+            className="secondary-content tooltipped"
+            data-position="top"
+            data-tooltip="Clear All Combatants"
           >
             <i className="material-icons red-text">delete_forever</i>
           </span>

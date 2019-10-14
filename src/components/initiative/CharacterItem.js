@@ -23,21 +23,33 @@ const CharacterItem = ({ combatant }) => {
   return (
     <li
       className={`collection-item ${
-        concentration === true ? 'green lighten-4' : ''
+        concentration === true ? 'red lighten-4' : ''
       }`}
     >
       <div>
-        <span className={`${type === 'PC' ? 'blue-text darken' : 'red-text'}`}>
+        <span
+          className={`${
+            type === 'PC' ? 'blue-text darken' : 'red-text darken'
+          }`}
+        >
           {name}
           <span> - {count}</span>
         </span>
-        <a href="#!" onClick={removeCharacter} className="secondary-content">
+        <a
+          href="#!"
+          onClick={removeCharacter}
+          className="secondary-content tooltipped"
+          data-position="top"
+          data-tooltip="Remove Combatant"
+        >
           <i className="material-icons red-text">delete</i>
         </a>
         <a
           href="#!"
           onClick={concentrationHandler}
-          className="secondary-content"
+          className="secondary-content tooltipped"
+          data-position="top"
+          data-tooltip="Concentration"
         >
           <i className="material-icons black-text">priority_high</i>
         </a>
