@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
-import data from './npcData/data.json';
+import names from './npcData/names.json';
+import quirks from './npcData/quirks.json';
 
 const NPCGen = () => {
   // State
   const [NPC, setNPC] = useState({
     gender: '',
-    race: ''
+    race: '',
+    quirk: '',
+    isGenerated: false
   });
   const [name, setName] = useState('');
+  const [quirk, setQuirk] = useState('');
 
   // onChange Handle
   const onChange = e => {
@@ -18,17 +22,18 @@ const NPCGen = () => {
   // Deconstruct NPC Object
   const { gender, race } = NPC;
 
-  // Get a random name from the data
+  // Get a random name from the names
   const getRandomName = () => {
-    let firstNum = Math.floor(Math.random() * data[race][gender].length);
-    let secondNum = Math.floor(Math.random() * data[race].lastName.length);
+    let firstNum = Math.floor(Math.random() * names[race][gender].length);
+    let secondNum = Math.floor(Math.random() * names[race].lastName.length);
 
     if (race === '' || gender === '') {
       alert('Please select and option from all fields');
     } else {
       setName(
-        `${data[race][gender][firstNum]} ${data[race].lastName[secondNum]}`
+        `${names[race][gender][firstNum]} ${names[race].lastName[secondNum]}`
       );
+      NPC.isGenerated = true;
     }
 
     console.log(`${firstNum} + ${secondNum}`);
@@ -68,10 +73,13 @@ const NPCGen = () => {
             <option value="" disabled>
               Select Race of NPC
             </option>
-            <option value="elf">Elf</option>
+
+            <option value="dragonborn">Dragonborn</option>
             <option value="dwarf">Dwarf</option>
+            <option value="elf">Elf</option>
             <option value="gnome">Gnome</option>
             <option value="halfling">Halfling</option>
+            <option value="human">Human</option>
           </select>
         </div>
         <button
