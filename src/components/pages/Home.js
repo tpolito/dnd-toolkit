@@ -32,8 +32,11 @@ const Home = () => {
                 <hr />
                 <p>
                   Take a quick look at the list of spells in your arsenal.
-                  Courtesy of <a href="https://open5e.com/">Open5e's API</a>,
-                  check out and view information on all the powerful spells in
+                  Courtesy of{' '}
+                  <a href="https://open5e.com/" className="black-text">
+                    Open5e's API
+                  </a>
+                  , check out and view information on all the powerful spells in
                   D&D!
                 </p>
               </div>

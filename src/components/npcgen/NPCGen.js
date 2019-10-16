@@ -7,7 +7,6 @@ const NPCGen = () => {
   const [NPC, setNPC] = useState({
     gender: '',
     race: '',
-    quirk: '',
     isGenerated: false
   });
   const [name, setName] = useState('');
@@ -20,16 +19,27 @@ const NPCGen = () => {
   };
 
   // Deconstruct NPC Object
-  const { gender, race } = NPC;
+  const { gender, race, isGenerated } = NPC;
+
+  // One or Zero
+  const getOneOrZero = () => {
+    let num = Math.round(Math.random());
+    if (num == 1) {
+      return true;
+    } else {
+      return false;
+    }
+  };
 
   // Get a random name from the names
   const getRandomName = () => {
-    let firstNum = Math.floor(Math.random() * names[race][gender].length);
-    let secondNum = Math.floor(Math.random() * names[race].lastName.length);
+    let firstNum, secondNum;
 
     if (race === '' || gender === '') {
       alert('Please select and option from all fields');
     } else {
+      firstNum = Math.floor(Math.random() * names[race][gender].length);
+      secondNum = Math.floor(Math.random() * names[race].lastName.length);
       setName(
         `${names[race][gender][firstNum]} ${names[race].lastName[secondNum]}`
       );
@@ -78,8 +88,13 @@ const NPCGen = () => {
             <option value="dwarf">Dwarf</option>
             <option value="elf">Elf</option>
             <option value="gnome">Gnome</option>
+            <option value={getOneOrZero() == 1 ? 'human' : 'elf'}>
+              Half-Elf
+            </option>
             <option value="halfling">Halfling</option>
+            <option value="half-orc">Half-Orc</option>
             <option value="human">Human</option>
+            <option value="teifling">Teifling</option>
           </select>
         </div>
         <button
@@ -87,9 +102,6 @@ const NPCGen = () => {
           className="waves-effect waves-light btn-large"
         >
           Generate An NPC
-        </button>
-        <button onClick={debug} className="waves-effect waves-light btn-large">
-          Debug
         </button>
         <div>
           <h4>{name}</h4>
