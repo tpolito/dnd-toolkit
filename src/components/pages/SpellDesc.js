@@ -4,7 +4,7 @@ import Preloader from '../layout/Preloader';
 const SpellDesc = ({ match, history }) => {
   // On Page Load
   useEffect(() => {
-    getSpell(`https://api-beta.open5e.com/spells/${match.params.slug}`);
+    getSpell(`http://www.dnd5eapi.co/api/spells/${match.params.id}`);
     // eslint-disable-next-line
   }, []);
 
@@ -27,6 +27,7 @@ const SpellDesc = ({ match, history }) => {
     const data = await res.json();
     setSpell(data);
     setLoading(false);
+    console.log(data);
   };
 
   // Destructuring
@@ -40,7 +41,11 @@ const SpellDesc = ({ match, history }) => {
     duration,
     range,
     concentration,
-    dnd_class
+    components,
+    ritual,
+    material,
+    classes,
+    subclasses
   } = spell;
 
   const previousPage = () => {
@@ -54,16 +59,16 @@ const SpellDesc = ({ match, history }) => {
 
   return (
     <Fragment>
-      <span onClick={previousPage} className="waves-effect waves-light">
+      <a href="/spells" className="waves-effect waves-light">
         <i className="material-icons left">arrow_back</i>
-      </span>
+      </a>
       <div className="card">
         <div className="col s12">
           <h4 className="center h4-pt">{name}</h4>
           <div className="divider" />
         </div>
         <div className="row">
-          <div className="col s4">
+          <div className="col s3">
             <p>
               <strong>Level: </strong>
               {level}
@@ -73,17 +78,17 @@ const SpellDesc = ({ match, history }) => {
               {duration}
             </p>
           </div>
-          <div className="col s4">
+          <div className="col s3">
             <p>
               <strong>Casting Time: </strong>
               {casting_time}
             </p>
             <p>
               <strong>School: </strong>
-              {school}
+              {school ? school.name : 'Loading...'}
             </p>
           </div>
-          <div className="col s4">
+          <div className="col s3">
             <p>
               <strong>Range: </strong>
               {range}
@@ -93,19 +98,36 @@ const SpellDesc = ({ match, history }) => {
               {concentration}
             </p>
           </div>
+          <div className="col s3">
+            <p>
+              <strong>Ritual: </strong>
+              {ritual}
+            </p>
+            <p>
+              <strong>Components: </strong>
+              {components && components.map(component => component)}
+            </p>
+          </div>
 
           <div className="col s12">
             <div className="divider" />
-            <p>{desc}</p>
-            {higher_level === '' ? null : (
+            <p>{desc ? desc[0] : null}</p>
+            {higher_level ? (
               <p>
                 <strong>At Higher Levels: </strong>
-                {higher_level}
+                {higher_level[0]}
               </p>
-            )}
+            ) : null}
+            {material ? (
+              <p>
+                <strong>Materials: </strong>
+                {material}
+              </p>
+            ) : null}
             <p>
               <strong>Learned By: </strong>
-              {dnd_class}
+              {classes && classes.map(dnd_class => `${dnd_class.name}, `)}
+              {subclasses && subclasses.map(sub_class => `${sub_class.name}, `)}
             </p>
           </div>
         </div>

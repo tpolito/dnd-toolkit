@@ -5,7 +5,7 @@ const Navbar = () => {
     <Fragment>
       <ul id="dropdown1" className="dropdown-content">
         <li>
-          <a href="/spells/1">Spell List</a>
+          <a href="/spells">Spell List</a>
         </li>
         <li>
           <a href="/ref">References</a>
@@ -17,7 +17,7 @@ const Navbar = () => {
       </ul>
       <ul id="dropdown2" className="dropdown-content">
         <li>
-          <a href="/init">Initiative</a>
+          <a href="/init">Initiative Tracker</a>
         </li>
         <li>
           <a href="/npc-gen">NPC Generator</a>
@@ -32,7 +32,7 @@ const Navbar = () => {
           <ul id="nav-mobile" className="right hide-on-medium-and-down">
             <li>
               <a className="dropdown-trigger" href="#!" data-target="dropdown2">
-                Initiative
+                Tools
                 <i className="material-icons right">arrow_drop_down</i>
               </a>
             </li>

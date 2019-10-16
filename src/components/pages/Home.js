@@ -41,7 +41,7 @@ const Home = () => {
                 </p>
               </div>
               <div className="card-action">
-                <a href="/spells/1" class="white-text">
+                <a href="/spells" class="white-text">
                   Click me to check it out!
                 </a>
               </div>

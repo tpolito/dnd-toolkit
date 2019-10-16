@@ -36,8 +36,8 @@ const App = () => {
                 <Route exact path="/ref" component={Reference} />
                 <Route exact path="/conditions" component={Conditions} />
                 <Route exact path="/npc-gen" component={NPCGen} />
-                <Route exact path="/spells/:page" component={Spells} />
-                <Route exact path="/spells/desc/:slug" component={SpellDesc} />
+                <Route exact path="/spells/" component={Spells} />
+                <Route exact path="/spells/desc/:id" component={SpellDesc} />
               </div>
             </main>
           </Switch>
