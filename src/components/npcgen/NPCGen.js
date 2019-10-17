@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import names from './npcData/names.json';
-import quirks from './npcData/quirks.json';
+// import quirks from './npcData/quirks.json';
 
 const NPCGen = () => {
   // State
   const [NPC, setNPC] = useState({
     gender: '',
-    race: '',
-    isGenerated: false
+    race: ''
   });
   const [name, setName] = useState('');
-  const [quirk, setQuirk] = useState('');
 
   // onChange Handle
   const onChange = e => {
@@ -19,12 +17,12 @@ const NPCGen = () => {
   };
 
   // Deconstruct NPC Object
-  const { gender, race, isGenerated } = NPC;
+  const { gender, race } = NPC;
 
   // One or Zero
   const getOneOrZero = () => {
     let num = Math.round(Math.random());
-    if (num == 1) {
+    if (num === 1) {
       return true;
     } else {
       return false;
@@ -43,14 +41,9 @@ const NPCGen = () => {
       setName(
         `${names[race][gender][firstNum]} ${names[race].lastName[secondNum]}`
       );
-      NPC.isGenerated = true;
     }
 
     console.log(`${firstNum} + ${secondNum}`);
-  };
-
-  const debug = () => {
-    console.log(NPC);
   };
 
   return (
@@ -88,7 +81,7 @@ const NPCGen = () => {
             <option value="dwarf">Dwarf</option>
             <option value="elf">Elf</option>
             <option value="gnome">Gnome</option>
-            <option value={getOneOrZero() == 1 ? 'human' : 'elf'}>
+            <option value={getOneOrZero() === 1 ? 'human' : 'elf'}>
               Half-Elf
             </option>
             <option value="halfling">Halfling</option>

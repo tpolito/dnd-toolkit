@@ -33,8 +33,8 @@ const Home = () => {
                 <p>
                   Take a quick look at the list of spells in your arsenal.
                   Courtesy of{' '}
-                  <a href="https://open5e.com/" className="black-text">
-                    Open5e's API
+                  <a href="http://www.dnd5eapi.co/" className="black-text">
+                    D&D 5e API
                   </a>
                   , check out and view information on all the powerful spells in
                   D&D!
@@ -52,7 +52,7 @@ const Home = () => {
               <div class="card-content white-text">
                 <span class="card-title">NPC Generator</span>
                 <hr />
-                <p>Generate simple NPC names based on Race & Sex!</p>
+                <p>Generate simple NPC names.</p>
               </div>
               <div className="card-action">
                 <a href="/npc-gen" class="white-text">

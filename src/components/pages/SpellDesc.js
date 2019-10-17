@@ -48,10 +48,6 @@ const SpellDesc = ({ match, history }) => {
     subclasses
   } = spell;
 
-  const previousPage = () => {
-    history.goBack();
-  };
-
   // Render checking
   if (loading) {
     return <Preloader />;
