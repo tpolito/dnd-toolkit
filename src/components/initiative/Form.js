@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useContext } from 'react';
+import React, { useState, Fragment, useContext, useEffect } from 'react';
 import InitContext from '../../context/init/initContext';
 
 const Form = () => {
@@ -14,7 +14,21 @@ const Form = () => {
   // Context
   const initContext = useContext(InitContext);
 
-  const { addInit } = initContext;
+  const { addInit, updateInit, clearCurrent, current } = initContext;
+
+  // Use Effect
+  useEffect(() => {
+    if (current !== null) {
+      setCombatant(current);
+    } else {
+      setCombatant({
+        id: '',
+        name: '',
+        count: '',
+        type: 'PC'
+      });
+    }
+  }, [initContext, current]);
 
   // onChange Handler
   const onChange = e => {
@@ -23,14 +37,24 @@ const Form = () => {
   // onSubmit Handler
   const onSubmit = e => {
     e.preventDefault();
+    if (current === null) {
+      addInit(combatant);
+    } else {
+      updateInit(combatant);
+    }
 
-    addInit(combatant);
+    clearForm();
 
-    setCombatant({
-      name: '',
-      count: '',
-      type: 'PC'
-    });
+    // setCombatant({
+    //   name: '',
+    //   count: '',
+    //   type: 'PC'
+    // });
+  };
+
+  // Clear Form
+  const clearForm = () => {
+    clearCurrent();
   };
 
   return (

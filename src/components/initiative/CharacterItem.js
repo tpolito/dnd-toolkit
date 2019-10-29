@@ -9,11 +9,17 @@ const CharacterItem = ({ combatant }) => {
   const { name, count, type, id } = combatant;
 
   const initContext = useContext(InitContext);
-  const { deleteCombatant } = initContext;
+  const { deleteCombatant, setCurrent } = initContext;
 
   // Event Handlers
+  // Remove Character
   const removeCharacter = () => {
     deleteCombatant(id);
+  };
+
+  // Edit Character
+  const editCharacter = () => {
+    setCurrent(combatant);
   };
 
   const concentrationHandler = () => {
@@ -43,6 +49,15 @@ const CharacterItem = ({ combatant }) => {
           data-tooltip="Remove Combatant"
         >
           <i className="material-icons red-text">delete</i>
+        </a>
+        <a
+          href="#!"
+          onClick={editCharacter}
+          className="secondary-content tooltipped"
+          data-position="top"
+          data-tooltip="Edit Character"
+        >
+          <i className="material-icons black-text">edit</i>
         </a>
         <a
           href="#!"

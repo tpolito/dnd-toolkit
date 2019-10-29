@@ -2,7 +2,15 @@ import React, { useReducer } from 'react';
 import InitContext from './initContext';
 import initReduceer from './initReducer';
 import uuid from 'uuid';
-import { ADD_INIT, GET_INIT, CLEAR_INIT, DELETE_INIT } from '../types';
+import {
+  ADD_INIT,
+  GET_INIT,
+  CLEAR_INIT,
+  DELETE_INIT,
+  SET_CURRENT,
+  CLEAR_CURRENT,
+  UPDATE_INIT
+} from '../types';
 
 const InitState = props => {
   const initialState = {
@@ -31,7 +39,8 @@ const InitState = props => {
       //   count: '1',
       //   type: 'PC'
       // }
-    ]
+    ],
+    current: null
   };
   const [state, dispatch] = useReducer(initReduceer, initialState);
   // Get combatants
@@ -54,14 +63,33 @@ const InitState = props => {
     dispatch({ type: DELETE_INIT, payload: id });
   };
 
+  // Set Current
+  const setCurrent = character => {
+    dispatch({ type: SET_CURRENT, payload: character });
+  };
+
+  // Clear Current
+  const clearCurrent = () => {
+    dispatch({ type: CLEAR_CURRENT });
+  };
+
+  // Update Combatant
+  const updateInit = character => {
+    dispatch({ type: UPDATE_INIT, payload: character });
+  };
+
   return (
     <InitContext.Provider
       value={{
         combatants: state.combatants,
+        current: state.current,
         getInit,
         addInit,
         deleteCombatant,
-        clearInit
+        clearInit,
+        setCurrent,
+        clearCurrent,
+        updateInit
       }}
     >
       {props.children}
