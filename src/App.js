@@ -31,7 +31,12 @@ const App = () => {
             <main>
               <div className="container">
                 <Route exact path="/" component={Home} />
-                <Route exact path="/init" component={InitiativeCounter} />
+                <Route
+                  exact
+                  path="/init"
+                  component={InitiativeCounter}
+                  title="Initiative Counter"
+                />
                 <Route exact path="/about" component={About} />
                 <Route exact path="/ref" component={Reference} />
                 <Route exact path="/conditions" component={Conditions} />

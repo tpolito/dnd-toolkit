@@ -104,7 +104,7 @@ const Form = () => {
           </div>
         </div>
         <button className="btn waves-effect waves-light blue" type="submit">
-          Submit
+          {current ? 'Update' : 'Submit'}
           <i className="material-icons right">person_add</i>
         </button>
       </form>

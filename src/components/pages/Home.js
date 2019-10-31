@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Home = () => {
+  useEffect(() => {
+    document.title = 'Home';
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <div className="row">
       <div className="col s12">

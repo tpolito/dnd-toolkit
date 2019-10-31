@@ -27,7 +27,6 @@ const SpellDesc = ({ match, history }) => {
     const data = await res.json();
     setSpell(data);
     setLoading(false);
-    console.log(data);
   };
 
   // Destructuring
@@ -47,6 +46,40 @@ const SpellDesc = ({ match, history }) => {
     classes,
     subclasses
   } = spell;
+
+  // Color Spell School
+  let color;
+  // Runs the switch once the school and school.name have loaded
+  if (school && school.name) {
+    switch (school.name) {
+      case 'Abjuration':
+        color = '#008acf';
+        break;
+      case 'Conjuration':
+        color = '#cfcf00';
+        break;
+      case 'Divination':
+        color = '#00bedb';
+        break;
+      case 'Enchantment':
+        color = '#c983b4';
+        break;
+      case 'Evocation':
+        color = '#822424';
+        break;
+      case 'Illusion':
+        color = '#6a3a87';
+        break;
+      case 'Necromancy':
+        color = '#4b962d';
+        break;
+      case 'Transmutation':
+        color = '#dba400';
+        break;
+      default:
+        color = 'black';
+    }
+  }
 
   // Render checking
   if (loading) {
@@ -81,7 +114,9 @@ const SpellDesc = ({ match, history }) => {
             </p>
             <p>
               <strong>School: </strong>
-              {school ? school.name : 'Loading...'}
+              <span style={{ color: color }}>
+                {school ? school.name : 'Loading...'}
+              </span>
             </p>
           </div>
           <div className="col s3">
