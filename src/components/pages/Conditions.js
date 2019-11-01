@@ -10,8 +10,9 @@ const Conditions = () => {
     // eslint-disable-next-line
   }, []);
   // State
-  const [conditions, setConditions] = useState([]);
+  let [conditions, setConditions] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [searchString, setSearchString] = useState('');
 
   // Fetch Conditions from API
   // Headers
@@ -31,7 +32,17 @@ const Conditions = () => {
     setLoading(false);
   };
 
-  // Deconstructing
+  // Filter
+  // Filter Input
+  const handleChange = e => {
+    setSearchString(e.target.value);
+  };
+
+  if (searchString.length > 0) {
+    conditions = conditions.filter(i => {
+      return i.name.toLowerCase().match(searchString);
+    });
+  }
 
   // Render checking
   if (loading) {
@@ -43,6 +54,11 @@ const Conditions = () => {
       <ul className="collection with-header">
         <li className="collection-header">
           <h4 className="center">Conditions</h4>
+          <input
+            type="text"
+            placeholder="Search for a condition"
+            onChange={handleChange}
+          />
         </li>
         {conditions &&
           conditions.map(condition => (
