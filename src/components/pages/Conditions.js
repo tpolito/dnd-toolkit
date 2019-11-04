@@ -7,6 +7,8 @@ const Conditions = () => {
   // On Page Load
   useEffect(() => {
     getConditions();
+    document.title = 'Conditions';
+
     // eslint-disable-next-line
   }, []);
   // State

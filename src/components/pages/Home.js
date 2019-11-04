@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 
 const Home = () => {
+  // Page Title
   useEffect(() => {
-    document.title = 'Home';
+    document.title = 'Home | D&D Toolkit';
     // eslint-disable-next-line
   }, []);
 

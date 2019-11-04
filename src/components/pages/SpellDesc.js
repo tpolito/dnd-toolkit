@@ -6,31 +6,14 @@ import data from '../data/Spells.json';
 const SpellDesc = ({ match, history }) => {
   // On Page Load
   useEffect(() => {
-    // getSpell(`http://www.dnd5eapi.co/api/spells/${match.params.id}`);
     getLocalSpell(match.params.id);
+    document.title = 'Spell Description';
     // eslint-disable-next-line
   }, []);
 
   // State
   const [spell, setSpell] = useState({});
   const [loading, setLoading] = useState(false);
-
-  //Get Spell Function
-  // Headers
-  const myHeaders = {
-    'Content-Type': 'application/json'
-  };
-
-  // const getSpell = async request => {
-  //   setLoading(true);
-  //   const res = await fetch(request, {
-  //     method: 'GET',
-  //     headers: myHeaders
-  //   });
-  //   const data = await res.json();
-  //   setSpell(data);
-  //   setLoading(false);
-  // };
 
   const getLocalSpell = async id => {
     setLoading(true);

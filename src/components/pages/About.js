@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const About = () => {
+  // Page Title
+  useEffect(() => {
+    document.title = 'About';
+    // eslint-disable-next-line
+  }, []);
   return (
     <div className="row">
       <h4 className="center">About</h4>

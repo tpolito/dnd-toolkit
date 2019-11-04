@@ -9,8 +9,8 @@ import uuid from 'uuid';
 const Spells = () => {
   // On Page Load
   useEffect(() => {
-    // getSpells(`http://www.dnd5eapi.co/api/spells`);
     getLocalSpells();
+    document.title = 'Spell List';
     //eslint-disable-next-line
   }, []);
 
@@ -21,25 +21,6 @@ const Spells = () => {
 
   // Deconstructing
   let { results } = spells;
-
-  // Fetch Headers
-  const myHeaders = {
-    'Content-Type': 'application/json'
-  };
-
-  // Fetch Spells from API
-  // const getSpells = async request => {
-  //   setLoading(true);
-  //   const res = await fetch(request, {
-  //     method: 'GET',
-  //     headers: myHeaders
-  //   });
-  //   const data = await res.json();
-  //   setSpells(data);
-  //   setLoading(false);
-
-  //   console.log(data);
-  // };
 
   // Get spells from local JSOn
   const getLocalSpells = async () => {
