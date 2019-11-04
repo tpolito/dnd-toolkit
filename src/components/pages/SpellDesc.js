@@ -35,7 +35,7 @@ const SpellDesc = ({ match, history }) => {
   const getLocalSpell = async id => {
     setLoading(true);
 
-    setSpell(data.results[id]);
+    setSpell(data.results[id - 1]);
 
     setLoading(false);
   };
