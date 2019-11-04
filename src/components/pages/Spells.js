@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react';
 import Preloader from '../layout/Preloader';
 import SpellItem from './SpellItem';
 
+import data from '../data/Spells.json';
+
 import uuid from 'uuid';
 
-const Spells = ({ match }) => {
+const Spells = () => {
   // On Page Load
   useEffect(() => {
-    getSpells(`http://www.dnd5eapi.co/api/spells`);
+    // getSpells(`http://www.dnd5eapi.co/api/spells`);
+    getLocalSpells();
     //eslint-disable-next-line
   }, []);
 
@@ -24,16 +27,29 @@ const Spells = ({ match }) => {
     'Content-Type': 'application/json'
   };
 
-  // Fetch Spells
-  const getSpells = async request => {
+  // Fetch Spells from API
+  // const getSpells = async request => {
+  //   setLoading(true);
+  //   const res = await fetch(request, {
+  //     method: 'GET',
+  //     headers: myHeaders
+  //   });
+  //   const data = await res.json();
+  //   setSpells(data);
+  //   setLoading(false);
+
+  //   console.log(data);
+  // };
+
+  // Get spells from local JSOn
+  const getLocalSpells = async () => {
     setLoading(true);
-    const res = await fetch(request, {
-      method: 'GET',
-      headers: myHeaders
-    });
-    const data = await res.json();
+
     setSpells(data);
+
     setLoading(false);
+
+    console.log(data);
   };
 
   // Filter Input

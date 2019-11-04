@@ -1,10 +1,13 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import Preloader from '../layout/Preloader';
 
+import data from '../data/Spells.json';
+
 const SpellDesc = ({ match, history }) => {
   // On Page Load
   useEffect(() => {
-    getSpell(`http://www.dnd5eapi.co/api/spells/${match.params.id}`);
+    // getSpell(`http://www.dnd5eapi.co/api/spells/${match.params.id}`);
+    getLocalSpell(match.params.id);
     // eslint-disable-next-line
   }, []);
 
@@ -18,14 +21,22 @@ const SpellDesc = ({ match, history }) => {
     'Content-Type': 'application/json'
   };
 
-  const getSpell = async request => {
+  // const getSpell = async request => {
+  //   setLoading(true);
+  //   const res = await fetch(request, {
+  //     method: 'GET',
+  //     headers: myHeaders
+  //   });
+  //   const data = await res.json();
+  //   setSpell(data);
+  //   setLoading(false);
+  // };
+
+  const getLocalSpell = async id => {
     setLoading(true);
-    const res = await fetch(request, {
-      method: 'GET',
-      headers: myHeaders
-    });
-    const data = await res.json();
-    setSpell(data);
+
+    setSpell(data.results[id]);
+
     setLoading(false);
   };
 
