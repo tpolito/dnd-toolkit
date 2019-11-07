@@ -29,6 +29,27 @@ const Home = () => {
               </div>
             </div>
           </div>
+          <div className="card">
+            <div class="card blue darken-1">
+              <div class="card-content white-text">
+                <span class="card-title">Condition List</span>
+                <hr />
+                <p>
+                  Powered by{' '}
+                  <a href="http://www.dnd5eapi.co/" className="black-text">
+                    Open5e's API
+                  </a>
+                  , the conditions page is an easy and quick way to look up the
+                  various conditions you can be afflicted with in DND 5e.
+                </p>
+              </div>
+              <div className="card-action">
+                <a href="/conditions" class="white-text">
+                  Click me to check it out!
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="col s6">
           <div className="card">
