@@ -27,7 +27,7 @@ const Navbar = () => {
       <nav className="blue darken-1" style={{ marginBottom: '30px' }}>
         <div className="nav-wrapper">
           <a href="/" className="brand-logo center">
-            D&D Toolkit
+            <span role="img" aria-label="dragon-emoji">🐲</span> D&D Toolkit
           </a>
           <ul id="nav-mobile" className="right hide-on-medium-and-down">
             <li>

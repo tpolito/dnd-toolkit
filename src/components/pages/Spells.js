@@ -34,6 +34,7 @@ const Spells = () => {
   };
 
   // Filter Input
+  //FIXME - Cannot search in uppercase
   const handleChange = e => {
     setSearchString(e.target.value);
   };
@@ -50,12 +51,12 @@ const Spells = () => {
   }
 
   return (
-    <ul className="collection with-header">
-      <li className="collection-header">
-        <h4 className="center">Spell List</h4>
+    <ul className='collection with-header'>
+      <li className='collection-header'>
+        <h4 className='center'>Spell List</h4>
         <input
-          type="text"
-          placeholder="Search for a spell"
+          type='text'
+          placeholder='Search for a spell'
           onChange={handleChange}
         />
       </li>

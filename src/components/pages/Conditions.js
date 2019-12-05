@@ -1,32 +1,32 @@
-import React, { useState, useEffect, Fragment } from 'react';
-import ConditionItem from '../conditions/ConditionItem';
-import uuid from 'uuid';
-import Preloader from '../layout/Preloader';
+import React, { useState, useEffect, Fragment } from "react";
+import ConditionItem from "../conditions/ConditionItem";
+import uuid from "uuid";
+import Preloader from "../layout/Preloader";
 
 const Conditions = () => {
   // On Page Load
   useEffect(() => {
     getConditions();
-    document.title = 'Conditions';
+    document.title = "Conditions";
 
     // eslint-disable-next-line
   }, []);
   // State
   let [conditions, setConditions] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [searchString, setSearchString] = useState('');
+  const [searchString, setSearchString] = useState("");
 
   // Fetch Conditions from API
   // Headers
   const myHeaders = {
-    'Content-Type': 'application/json'
+    "Content-Type": "application/json"
   };
 
   // Fetch Request
   const getConditions = async () => {
     setLoading(true);
-    const res = await fetch('https://api-beta.open5e.com/conditions/', {
-      method: 'GET',
+    const res = await fetch("https://api-beta.open5e.com/conditions/", {
+      method: "GET",
       headers: myHeaders
     });
     const data = await res.json();

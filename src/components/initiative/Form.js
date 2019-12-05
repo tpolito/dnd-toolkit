@@ -59,53 +59,53 @@ const Form = () => {
 
   return (
     <Fragment>
-      <h4 className="center">Character Form</h4>
+      <h4 className='center'>Character Form</h4>
       <form onSubmit={onSubmit}>
-        <div className="row">
-          <div className="input-field col s8">
+        <div className='row'>
+          <div className='input-field col s8'>
             <input
-              type="text"
-              placeholder="Character Name"
+              type='text'
+              placeholder='Character Name'
               required
-              name="name"
+              name='name'
               onChange={onChange}
               value={name}
             />
-            <label htmlFor="name">Character Name</label>
+            <label htmlFor='name'>Character Name</label>
           </div>
-          <div className="input-field col s4">
+          <div className='input-field col s4'>
             <input
-              type="number"
-              placeholder="Initiative"
+              type='number'
+              placeholder='Initiative'
               required
-              name="count"
+              name='count'
               onChange={onChange}
               value={count}
-              min="0"
-              max="45"
+              min='0'
+              max='45'
             />
-            <label htmlFor="count">Initiative</label>
+            <label htmlFor='count'>Initiative</label>
           </div>
         </div>
-        <div className="row">
-          <div className="input-field">
+        <div className='row'>
+          <div className='input-field'>
             <select
-              name="type"
+              name='type'
               value={type}
-              className="browser-default"
+              className='browser-default'
               onChange={onChange}
             >
-              <option value="" disabled>
+              <option value='' disabled>
                 Select Type of Character
               </option>
-              <option value="PC">PC</option>
-              <option value="NPC">NPC</option>
+              <option value='PC'>PC</option>
+              <option value='NPC'>NPC</option>
             </select>
           </div>
         </div>
-        <button className="btn waves-effect waves-light blue" type="submit">
+        <button className='btn waves-effect waves-light blue' type='submit'>
           {current ? 'Update' : 'Submit'}
-          <i className="material-icons right">person_add</i>
+          <i className='material-icons right'>person_add</i>
         </button>
       </form>
     </Fragment>
