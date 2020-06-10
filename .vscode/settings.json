@@ -4,5 +4,7 @@
     "titleBar.inactiveForeground": "#000000CC",
     "titleBar.activeBackground": "#ff00dd",
     "titleBar.inactiveBackground": "#8f007c"
-  }
+  },
+  "typescript.validate.enable": false,
+  "javascript.validate.enable": false
 }
