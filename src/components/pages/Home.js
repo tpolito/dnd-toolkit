@@ -13,9 +13,9 @@ const Home = () => {
         <h4 className='center'>Home</h4>
         <div className='col s12 m6'>
           <div className='card'>
-            <div class='card blue darken-1'>
-              <div class='card-content white-text'>
-                <span class='card-title'>Initiative Tracker</span>
+            <div className='card blue darken-1'>
+              <div className='card-content white-text'>
+                <span className='card-title'>Initiative Tracker</span>
                 <hr />
                 <p>
                   Use this quick initiative tool to create and track simple
@@ -23,16 +23,16 @@ const Home = () => {
                 </p>
               </div>
               <div className='card-action'>
-                <a href='/init' class='white-text'>
+                <a href='/init' className='white-text'>
                   Click me to check it out!
                 </a>
               </div>
             </div>
           </div>
           <div className='card'>
-            <div class='card blue darken-1'>
-              <div class='card-content white-text'>
-                <span class='card-title'>Condition List</span>
+            <div className='card blue darken-1'>
+              <div className='card-content white-text'>
+                <span className='card-title'>Condition List</span>
                 <hr />
                 <p>
                   Powered by{' '}
@@ -44,7 +44,7 @@ const Home = () => {
                 </p>
               </div>
               <div className='card-action'>
-                <a href='/conditions' class='white-text'>
+                <a href='/conditions' className='white-text'>
                   Click me to check it out!
                 </a>
               </div>
@@ -53,9 +53,9 @@ const Home = () => {
         </div>
         <div className='col s12 m6'>
           <div className='card'>
-            <div class='card blue darken-1'>
-              <div class='card-content white-text'>
-                <span class='card-title'>Spell List</span>
+            <div className='card blue darken-1'>
+              <div className='card-content white-text'>
+                <span className='card-title'>Spell List</span>
                 <hr />
                 <p>
                   Take a quick look at the list of spells in your arsenal.
@@ -68,21 +68,21 @@ const Home = () => {
                 </p>
               </div>
               <div className='card-action'>
-                <a href='/spells' class='white-text'>
+                <a href='/spells' className='white-text'>
                   Click me to check it out!
                 </a>
               </div>
             </div>
           </div>
           <div className='card'>
-            <div class='card blue darken-1'>
-              <div class='card-content white-text'>
-                <span class='card-title'>NPC Generator</span>
+            <div className='card blue darken-1'>
+              <div className='card-content white-text'>
+                <span className='card-title'>NPC Generator</span>
                 <hr />
                 <p>Generate simple NPC names.</p>
               </div>
               <div className='card-action'>
-                <a href='/npc-gen' class='white-text'>
+                <a href='/npc-gen' className='white-text'>
                   Click me to check it out!
                 </a>
               </div>

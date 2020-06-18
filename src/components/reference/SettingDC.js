@@ -2,10 +2,10 @@ import React from 'react';
 
 const SettingDC = () => {
   return (
-    <div className="card">
-      <div class="card blue darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">Setting A DC</span>
+    <div className='card'>
+      <div className='card blue darken-1'>
+        <div className='card-content white-text'>
+          <span className='card-title'>Setting A DC</span>
           <hr />
           <p>
             Walls, trees, creatures, and other obstacles can provide cover

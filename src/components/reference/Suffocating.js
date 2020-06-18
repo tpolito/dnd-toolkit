@@ -2,10 +2,10 @@ import React from 'react';
 
 const Suffocating = () => {
   return (
-    <div className="card">
-      <div class="card blue darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">Suffocating</span>
+    <div className='card'>
+      <div className='card blue darken-1'>
+        <div className='card-content white-text'>
+          <span className='card-title'>Suffocating</span>
           <hr />
           <p>
             A creature can hold its breath for a number of minutes equal to 1 +

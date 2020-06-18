@@ -24,6 +24,28 @@ const Navbar = () => {
         </li>
         <li className='divider' />
       </ul>
+      {/* Seperator */}
+      <ul id='dropdown3' className='dropdown-content'>
+        <li>
+          <a href='/spells'>Spell List</a>
+        </li>
+        <li>
+          <a href='/ref'>References</a>
+        </li>
+        <li>
+          <a href='/conditions'>Conditions</a>
+        </li>
+        <li className='divider' />
+      </ul>
+      <ul id='dropdown4' className='dropdown-content'>
+        <li>
+          <a href='/init'>Initiative Tracker</a>
+        </li>
+        <li>
+          <a href='/npc-gen'>NPC Generator</a>
+        </li>
+        <li className='divider' />
+      </ul>
       <nav className='blue darken-1' style={{ marginBottom: '30px' }}>
         <div className='nav-wrapper'>
           <a href='/' className='brand-logo center'>
@@ -51,15 +73,16 @@ const Navbar = () => {
               <a href='/about'>About</a>
             </li>
           </ul>
+          {/* Side Nav */}
           <ul className='sidenav' id='mobile-demo'>
             <li>
-              <a className='dropdown-trigger' href='#!' data-target='dropdown2'>
+              <a className='dropdown-trigger' href='#!' data-target='dropdown4'>
                 Tools
                 <i className='material-icons right'>arrow_drop_down</i>
               </a>
             </li>
             <li>
-              <a className='dropdown-trigger' href='#!' data-target='dropdown1'>
+              <a className='dropdown-trigger' href='#!' data-target='dropdown3'>
                 Reference<i className='material-icons right'>arrow_drop_down</i>
               </a>
             </li>

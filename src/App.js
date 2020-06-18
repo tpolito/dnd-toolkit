@@ -19,30 +19,31 @@ import InitState from './context/init/InitState';
 const App = () => {
   // MaterialCSS Init
   useEffect(() => {
+    // Enables materialize CSS javascript functions
     M.AutoInit();
     // eslint-disable-next-line
   }, []);
   return (
     <InitState>
       <Router>
-        <div className="App">
+        <div className='App'>
           <Navbar />
           <Switch>
             <main>
-              <div className="container">
-                <Route exact path="/" component={Home} />
+              <div className='container'>
+                <Route exact path='/' component={Home} />
                 <Route
                   exact
-                  path="/init"
+                  path='/init'
                   component={InitiativeCounter}
-                  title="Initiative Counter"
+                  title='Initiative Counter'
                 />
-                <Route exact path="/about" component={About} />
-                <Route exact path="/ref" component={Reference} />
-                <Route exact path="/conditions" component={Conditions} />
-                <Route exact path="/npc-gen" component={NPCGen} />
-                <Route exact path="/spells/" component={Spells} />
-                <Route exact path="/spells/desc/:id" component={SpellDesc} />
+                <Route exact path='/about' component={About} />
+                <Route exact path='/ref' component={Reference} />
+                <Route exact path='/conditions' component={Conditions} />
+                <Route exact path='/npc-gen' component={NPCGen} />
+                <Route exact path='/spells/' component={Spells} />
+                <Route exact path='/spells/desc/:id' component={SpellDesc} />
               </div>
             </main>
           </Switch>
