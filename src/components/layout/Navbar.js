@@ -32,8 +32,8 @@ const Navbar = () => {
             </span>{' '}
             D&D Toolkit
           </a>
-          <a href='#' data-target='mobile-demo' class='sidenav-trigger'>
-            <i class='material-icons'>menu</i>
+          <a href='#!' data-target='mobile-demo' className='sidenav-trigger'>
+            <i className='material-icons'>menu</i>
           </a>
           <ul id='nav-mobile' className='right hide-on-small-and-down'>
             <li>
@@ -51,7 +51,7 @@ const Navbar = () => {
               <a href='/about'>About</a>
             </li>
           </ul>
-          <ul class='sidenav' id='mobile-demo'>
+          <ul className='sidenav' id='mobile-demo'>
             <li>
               <a className='dropdown-trigger' href='#!' data-target='dropdown2'>
                 Tools

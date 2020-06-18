@@ -38,9 +38,9 @@
 
 /* Side Nav Trigger */
 
-/* nav .sidenav-trigger {
-  float: right;
-} */
+nav .sidenav-trigger {
+  float: right !important;
+}
 
 @media only screen and (min-width: 832px) {
   nav a.sidenav-trigger {
