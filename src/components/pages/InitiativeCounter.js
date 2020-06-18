@@ -8,11 +8,11 @@ const InitiativeCounter = () => {
     // eslint-disable-next-line
   }, []);
   return (
-    <div className="row">
-      <div className="col s6">
+    <div className='row'>
+      <div className='col s12 m6'>
         <Form />
       </div>
-      <div className="col s6">
+      <div className='col s12 m6'>
         <InitiativeDisplay />
       </div>
     </div>

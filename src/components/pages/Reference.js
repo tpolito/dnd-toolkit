@@ -11,14 +11,14 @@ const Reference = () => {
   }, []);
 
   return (
-    <div className="row">
-      <div className="col s12">
-        <h4 className="center">References</h4>
-        <div className="col s6">
+    <div className='row'>
+      <div className='col s12'>
+        <h4 className='center'>References</h4>
+        <div className='col s12 m6'>
           <Suffocating />
           <SettingDC />
         </div>
-        <div className="col s6">
+        <div className='col s12 m6'>
           <Cover />
         </div>
       </div>

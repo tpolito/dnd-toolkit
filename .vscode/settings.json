@@ -6,5 +6,6 @@
     "titleBar.inactiveBackground": "#8f007c"
   },
   "typescript.validate.enable": false,
-  "javascript.validate.enable": false
+  "javascript.validate.enable": false,
+  "deno.enable": false
 }

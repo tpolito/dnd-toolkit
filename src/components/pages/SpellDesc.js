@@ -15,7 +15,7 @@ const SpellDesc = ({ match, history }) => {
   const [spell, setSpell] = useState({});
   const [loading, setLoading] = useState(false);
 
-  const getLocalSpell = async id => {
+  const getLocalSpell = async (id) => {
     setLoading(true);
 
     setSpell(data.results[id - 1]);
@@ -38,7 +38,7 @@ const SpellDesc = ({ match, history }) => {
     ritual,
     material,
     classes,
-    subclasses
+    subclasses,
   } = spell;
 
   // Color Spell School
@@ -82,16 +82,16 @@ const SpellDesc = ({ match, history }) => {
 
   return (
     <Fragment>
-      <a href="/spells" className="waves-effect waves-light">
-        <i className="material-icons left">arrow_back</i>
+      <a href='/spells' className='waves-effect waves-light'>
+        <i className='material-icons left'>arrow_back</i>
       </a>
-      <div className="card">
-        <div className="col s12">
-          <h4 className="center h4-pt">{name}</h4>
-          <div className="divider" />
+      <div className='card'>
+        <div className='col s12'>
+          <h4 className='center h4-pt'>{name}</h4>
+          <div className='divider' />
         </div>
-        <div className="row">
-          <div className="col s3">
+        <div className='row'>
+          <div className='col s3'>
             <p>
               <strong>Level: </strong>
               {level}
@@ -101,7 +101,7 @@ const SpellDesc = ({ match, history }) => {
               {duration}
             </p>
           </div>
-          <div className="col s3">
+          <div className='col s3'>
             <p>
               <strong>Casting Time: </strong>
               {casting_time}
@@ -113,29 +113,29 @@ const SpellDesc = ({ match, history }) => {
               </span>
             </p>
           </div>
-          <div className="col s3">
+          <div className='col s3'>
             <p>
               <strong>Range: </strong>
               {range}
             </p>
             <p>
               <strong>Concentration: </strong>
-              {concentration}
+              {concentration ? 'Yes' : 'No'}
             </p>
           </div>
-          <div className="col s3">
+          <div className='col s3'>
             <p>
               <strong>Ritual: </strong>
-              {ritual}
+              {ritual ? 'Yes' : 'No'}
             </p>
             <p>
               <strong>Components: </strong>
-              {components && components.map(component => component)}
+              {components && components.map((component) => component)}
             </p>
           </div>
 
-          <div className="col s12">
-            <div className="divider" />
+          <div className='col s12'>
+            <div className='divider' />
             <p>{desc ? desc[0] : null}</p>
             {higher_level ? (
               <p>
@@ -151,8 +151,9 @@ const SpellDesc = ({ match, history }) => {
             ) : null}
             <p>
               <strong>Learned By: </strong>
-              {classes && classes.map(dnd_class => `${dnd_class.name}, `)}
-              {subclasses && subclasses.map(sub_class => `${sub_class.name}, `)}
+              {classes && classes.map((dnd_class) => `${dnd_class.name}, `)}
+              {subclasses &&
+                subclasses.map((sub_class) => `${sub_class.name}, `)}
             </p>
           </div>
         </div>
