@@ -1,10 +1,22 @@
 Project:
-    ☐ Add additional NPC names/quirks @created(20-06-10 16:41)
-    Maybe add backstories and stats?s
-    ✔ Mobile styling  @created(20-06-10 16:39) @done(20-06-18 13:21)
-    The mobile break points make for a bad experince on mobile/smaller screens
-    I did this for all the pages with cards and on the nav bar (see notion for notes on how I did this)
+    Ideas:
+        Have the cards all pull from a database instead of being hard coded. That way adding new card is easy and repeatable. Plus it makes the code more DRY.
+    CSS:
+        ✔ Mobile styling  @created(20-06-10 16:39) @done(20-06-18 13:21)
+        The mobile break points make for a bad experince on mobile/smaller screens
+        I did this for all the pages with cards and on the nav bar (see notion for notes on how I did this)
+    Miscellaneous:
+        ☐ Fix the wording on the "Setting a DC Card", its the same and the armor class card. @created(20-06-18 14:41)
+    
+    NPC Gen:
+        ☐ Redo the entire way the npc names are picked/chosen @created(20-06-18 18:57)
+        ☐ Remove the console.logs from the page @created(20-06-18 15:58)
+        Unnessesary console.logs are still in production
+        ☐ Add additional NPC names/quirks @created(20-06-10 16:41)
+        Maybe add backstories and stats?
+
 
 Bugs:
+    ☐ Cannot search for spells in Upper case@created(20-06-18 18:58)
     ✔ After updating the navbar for mobile (adding the sidenav) the drop downs on the navbar no longer work. @created(20-06-18 13:48) @done(20-06-18 14:39)
     The short term solution is that I need to create an additional dropdown <ul> for the side nav. Navs in materialize cannot share the same dropdown target

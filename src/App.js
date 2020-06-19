@@ -5,7 +5,7 @@ import About from './components/pages/About';
 import Navbar from './components/layout/Navbar';
 import Reference from './components/pages/Reference';
 import Spells from './components/pages/Spells';
-import SpellDesc from './components/pages/SpellDesc';
+import SpellDesc from './components/spells/SpellDesc';
 import Conditions from './components/pages/Conditions';
 import Home from './components/pages/Home';
 import NPCGen from './components/npcgen/NPCGen';

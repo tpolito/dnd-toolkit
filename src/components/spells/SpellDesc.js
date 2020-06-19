@@ -91,7 +91,7 @@ const SpellDesc = ({ match, history }) => {
           <div className='divider' />
         </div>
         <div className='row'>
-          <div className='col s3'>
+          <div className='col s6 m3'>
             <p>
               <strong>Level: </strong>
               {level}
@@ -101,7 +101,7 @@ const SpellDesc = ({ match, history }) => {
               {duration}
             </p>
           </div>
-          <div className='col s3'>
+          <div className='col s6 m3'>
             <p>
               <strong>Casting Time: </strong>
               {casting_time}
@@ -113,7 +113,7 @@ const SpellDesc = ({ match, history }) => {
               </span>
             </p>
           </div>
-          <div className='col s3'>
+          <div className='col s6 m3'>
             <p>
               <strong>Range: </strong>
               {range}
@@ -123,7 +123,7 @@ const SpellDesc = ({ match, history }) => {
               {concentration ? 'Yes' : 'No'}
             </p>
           </div>
-          <div className='col s3'>
+          <div className='col s6 m3'>
             <p>
               <strong>Ritual: </strong>
               {ritual ? 'Yes' : 'No'}
