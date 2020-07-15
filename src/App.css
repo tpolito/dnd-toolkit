@@ -37,11 +37,12 @@
 }
 
 /* Side Nav Trigger */
-
+/* Changes the hamburger icon to the righthand side  */
 nav .sidenav-trigger {
   float: right !important;
 }
 
+/* Hides the  */
 @media only screen and (min-width: 832px) {
   nav a.sidenav-trigger {
     display: none !important;
