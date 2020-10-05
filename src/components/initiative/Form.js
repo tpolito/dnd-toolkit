@@ -59,7 +59,7 @@ const Form = () => {
 
   return (
     <Fragment>
-      <h4 className='center'>Character Form</h4>
+      <h4 className='center'>Add A Character</h4>
       <form onSubmit={onSubmit}>
         <div className='row'>
           <div className='input-field col s8'>
