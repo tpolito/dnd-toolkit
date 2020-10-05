@@ -25,7 +25,7 @@ const Conditions = () => {
   // Fetch Request
   const getConditions = async () => {
     setLoading(true);
-    const res = await fetch("https://api-beta.open5e.com/conditions/", {
+    const res = await fetch("https://api.open5e.com/conditions/", {
       method: "GET",
       headers: myHeaders
     });

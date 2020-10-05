@@ -3,7 +3,6 @@ Project:
         1. Have the cards all pull from a database instead of being hard coded. That way adding new card is easy and repeatable. Plus it makes the code more DRY.
         2. Add a "dark mode" button
             Don't know exactly how this would work. There is a good fireship.io vidoe covering it, but I'd have to adjust it to work with materialize probably
-        3. 
     CSS:
         ✔ Mobile styling  @created(20-06-10 16:39) @done(20-06-18 13:21)
         The mobile break points make for a bad experince on mobile/smaller screens
