@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Preloader from '../layout/Preloader';
 import SpellItem from '../spells/SpellItem';
-
 import data from '../data/Spells.json';
-
 import uuid from 'uuid';
 
 const Spells = () => {
@@ -23,23 +21,20 @@ const Spells = () => {
   let { results } = spells;
 
   // Get spells from local JSON file
-  const getLocalSpells = async () => {
+  async function getLocalSpells() {
     setLoading(true);
-
     setSpells(data);
-
     setLoading(false);
   };
 
   // Filter Input
-  //FIXME - Cannot search in uppercase
   const handleChange = (e) => {
     setSearchString(e.target.value);
   };
 
   if (searchString.length > 0) {
     results = results.filter((i) => {
-      return i.name.toLowerCase().match(searchString);
+      return i.name.toLowerCase().match(searchString.toLowerCase());
     });
   }
 

@@ -8,6 +8,9 @@ const Navbar = () => {
           <a href='/spells'>Spell List</a>
         </li>
         <li>
+          <a href="/weapons">Weapon List</a>
+        </li>
+        <li>
           <a href='/ref'>References</a>
         </li>
         <li>
@@ -28,6 +31,9 @@ const Navbar = () => {
       <ul id='dropdown3' className='dropdown-content'>
         <li>
           <a href='/spells'>Spell List</a>
+        </li>
+        <li>
+          <a href="/weapons">Weapon List</a>
         </li>
         <li>
           <a href='/ref'>References</a>

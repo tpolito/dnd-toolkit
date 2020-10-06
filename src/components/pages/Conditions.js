@@ -42,7 +42,7 @@ const Conditions = () => {
 
   if (searchString.length > 0) {
     conditions = conditions.filter(i => {
-      return i.name.toLowerCase().match(searchString);
+      return i.name.toLowerCase().match(searchString.toLowerCase());
     });
   }
 

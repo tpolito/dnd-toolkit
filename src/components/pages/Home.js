@@ -50,6 +50,26 @@ const Home = () => {
               </div>
             </div>
           </div>
+          <div className='card'>
+            <div className='card blue darken-1'>
+              <div className='card-content white-text'>
+                <span className='card-title'>Weapons List</span>
+                <hr />
+                <p>
+                  With data from{' '}
+                  <a href='http://www.dnd5eapi.co/' className='black-text'>
+                    Open5e's API
+                  </a>
+                  , the weapons list is is a quick way to check damage and properties of normal weapons.
+                </p>
+              </div>
+              <div className='card-action'>
+                <a href='/weapons' className='white-text'>
+                  Click me to check it out!
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
         <div className='col s12 m6'>
           <div className='card'>

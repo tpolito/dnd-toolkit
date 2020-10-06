@@ -151,9 +151,12 @@ const SpellDesc = ({ match, history }) => {
             ) : null}
             <p>
               <strong>Learned By: </strong>
-              {classes && classes.map((dnd_class) => `${dnd_class.name}, `)}
+              {classes && classes.map((dnd_class) => dnd_class.name + ', ')}
+            </p>
+            <p>
+              <strong>Learned By Subclasses: </strong>
               {subclasses &&
-                subclasses.map((sub_class) => `${sub_class.name}, `)}
+                subclasses.map((sub_class) => sub_class.name + ',')}
             </p>
           </div>
         </div>
