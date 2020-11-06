@@ -36,7 +36,7 @@ const Home = () => {
                 <hr />
                 <p>
                   Powered by{' '}
-                  <a href='http://www.dnd5eapi.co/' className='black-text'>
+                  <a href='https://open5e.com/' className='black-text'>
                     Open5e's API
                   </a>
                   , the conditions page is an easy and quick way to look up the
@@ -57,7 +57,7 @@ const Home = () => {
                 <hr />
                 <p>
                   With data from{' '}
-                  <a href='http://www.dnd5eapi.co/' className='black-text'>
+                  <a href='https://open5e.com/' className='black-text'>
                     Open5e's API
                   </a>
                   , the weapons list is is a quick way to check damage and properties of normal weapons.
