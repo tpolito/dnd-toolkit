@@ -12,6 +12,8 @@ import Weapons from './components/pages/Weapons';
 import WeaponsDesc from './components/weapons/WeaponsDesc';
 import NPCGen from './components/npcgen/NPCGen';
 
+import Test from './components/pages/Test'
+
 import './App.css';
 import M from 'materialize-css';
 import 'materialize-css/dist/css/materialize.min.css';
@@ -41,6 +43,7 @@ const App = () => {
                   title='Initiative Counter'
                 />
                 <Route exact path='/about' component={About} />
+                <Route exact path='/test' component={Test} />
                 <Route exact path='/ref' component={Reference} />
                 <Route exact path='/conditions' component={Conditions} />
                 <Route exact path='/npc-gen' component={NPCGen} />
