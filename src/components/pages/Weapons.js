@@ -7,6 +7,7 @@ const Weapons = () => {
     useEffect(() => {
         getWeapons();
         document.title = 'Weapons'
+    //eslint-disable-next-line
     }, [])
 
     let [weapons, setWeapons] = useState([]);
