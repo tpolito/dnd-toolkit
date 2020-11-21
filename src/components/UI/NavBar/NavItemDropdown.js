@@ -29,15 +29,15 @@ const NavItemDropdown = ({text, dropdown}) => {
 
     // TODO: Add an arrow to the button to indicate its a dropdown
     return (
-        <li className="relative mx-5" ref={dropDownItem}>
-            <button onClick={handleClick} className="font-semibold hover:bg-white focus:outline-none">
+        <li className="relative p-5 hover:bg-white" ref={dropDownItem}>
+            <button onClick={handleClick} className="font-semibold focus:outline-none">
                 {text}
             </button>
             {showDropdown ? (
                 <div className="bg-white absolute right-0 rounded-lg mt-1 z-10 py-2 w-48">
                     {dropdown.map(item => {
                         return (
-                            <a key={item.key} href={item.link} className="block py-2 text-blue-800 font-semibold px-4 hover:text-tertiary">{item.text}</a>
+                            <a key={item.key} href={item.link} className="block py-2 text-blue-800 font-semibold px-4 hover:text-tertiary duration-150">{item.text}</a>
                         )
                     })}
                 </div>

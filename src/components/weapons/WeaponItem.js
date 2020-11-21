@@ -7,11 +7,9 @@ const WeaponItem = ({ weapon }) => {
 //   const spellNum = url.substr(34);
 
   return (
-    <Fragment>
       <li className="collection-item">
         <a href={`/weapons/desc/${slug}`}>{name}</a>
       </li>
-    </Fragment>
   );
 };
 

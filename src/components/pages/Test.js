@@ -1,13 +1,29 @@
 import React from 'react';
-import Card from '../layout/Card'
+import ListContainer from '../layout/Lists/ListContainer'
+import ListItem from '../layout/Lists/ListItem'
 
 const Test = () => {
-    const test = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto blanditiis consectetur sit, vitae laudantium architecto facere aspernatur et eligendi assumenda illum nobis ipsam qui tempora nesciunt esse temporibus, voluptatibus nisi."
+
+
+    const data = [
+        { key: 1, string: 'Dog', url: '/url' },
+        { key: 2, string: 'Cat', url: '/url' },
+        { key: 3, string: 'Cow', url: '/url' },
+        { key: 4, string: 'Shark', url: '/url' },
+        { key: 5, string: 'Mouse', url: '/url' },
+        { key: 6, string: 'Hedgehog', url: '/url' },
+        { key: 7, string: 'Tiger', url: '/url' },
+        { key: 8, string: 'Lion', url: '/url' },
+        { key: 9, string: 'Bear', url: '/url' },
+        { key: 10, string: 'Fish', url: '/url' }
+    ]
+
     return (
-        <div className="flex mb-4">
-            <Card title="Hello World" desc={test} link="/test" />
-            <Card title="Second Card" desc={test} link="/test" />
-        </div>
+        <ListContainer inputPlaceholder="Animal Name...">
+            {data.map(item => {
+                return <ListItem key={item.key} text={item.string} url={item.url}></ListItem >
+            })}
+        </ListContainer>
     )
 }
 

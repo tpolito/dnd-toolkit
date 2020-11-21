@@ -10,35 +10,35 @@ import {
   SET_CURRENT,
   CLEAR_CURRENT,
   UPDATE_INIT
-} from '../types';
+} from './types';
 
 const InitState = props => {
   const initialState = {
     combatants: [
-      // {
-      //   id: 1,
-      //   name: 'Darkness',
-      //   count: '16',
-      //   type: 'PC'
-      // },
-      // {
-      //   id: 2,
-      //   name: 'Big Evil Bad Guy',
-      //   count: '12',
-      //   type: 'NPC'
-      // },
-      // {
-      //   id: 3,
-      //   name: 'Henchman',
-      //   count: '9',
-      //   type: 'NPC'
-      // },
-      // {
-      //   id: 4,
-      //   name: 'Effie',
-      //   count: '1',
-      //   type: 'PC'
-      // }
+      {
+        id: 1,
+        name: 'Darkness',
+        count: '16',
+        type: 'PC'
+      },
+      {
+        id: 2,
+        name: 'Big Evil Bad Guy',
+        count: '12',
+        type: 'NPC'
+      },
+      {
+        id: 3,
+        name: 'Henchman',
+        count: '9',
+        type: 'NPC'
+      },
+      {
+        id: 4,
+        name: 'Zakron',
+        count: '1',
+        type: 'PC'
+      }
     ],
     current: null
   };

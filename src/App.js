@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import InitiativeCounter from './components/pages/InitiativeCounter';
 import About from './components/pages/About';
-import Navbar from './components/layout/NavBar/Navbar';
+import Navbar from './components/UI/NavBar/Navbar';
 import Reference from './components/pages/Reference';
 import Spells from './components/pages/Spells';
 import SpellDesc from './components/spells/SpellDesc';
@@ -25,8 +25,7 @@ const App = () => {
         <div className='App'>
           <Navbar />
           <Switch>
-            <main>
-              <div className='container'>
+            <div>
                 <Route exact path='/' component={Home} />
                 <InitState>
                   <Route
@@ -45,8 +44,7 @@ const App = () => {
                 <Route exact path='/spells/desc/:id' component={SpellDesc} />
                 <Route exact path='/weapons/' component={Weapons} />
                 <Route exact path='/weapons/desc/:slug' component={WeaponsDesc} />
-              </div>
-            </main>
+            </div>
           </Switch>
           {/* <footer className="page-footer">© 2019 Copyright DnDToolKit</footer> */}
         </div>

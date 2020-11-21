@@ -4,12 +4,26 @@ module.exports = {
     theme: {
       extend: {
         colors: {
-          'primary': '#ffd29d',
-          'secondary': '#7bdff2',
-          'tertiary': '#918450',
-          'accent': '#f1e6ba',
-          'main': '#181d27'
+          'main': '#181D27',
+          'primary': '#7BDFF2',
+          'secondary': '#7D83FF',
+          'tert': '#007FFF',
+          'accent': '#FCF7FF'
+
         }
+      },
+      screens: {
+        'xl': {'max': '1279px'},
+        // => @media (max-width: 1279px) { ... }
+  
+        'lg': {'max': '1023px'},
+        // => @media (max-width: 1023px) { ... }
+  
+        'md': {'max': '767px'},
+        // => @media (max-width: 767px) { ... }
+  
+        'sm': {'max': '639px'},
+        // => @media (max-width: 639px) { ... }
       }
     },
     variants: {},

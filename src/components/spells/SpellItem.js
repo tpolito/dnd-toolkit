@@ -7,11 +7,9 @@ const SpellItem = ({ spell }) => {
   const spellNum = url.substr(34);
 
   return (
-    <Fragment>
       <li className="collection-item">
         <a href={`/spells/desc/${spellNum}`}>{name}</a>
       </li>
-    </Fragment>
   );
 };
 

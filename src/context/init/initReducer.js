@@ -6,7 +6,7 @@ import {
   SET_CURRENT,
   CLEAR_CURRENT,
   UPDATE_INIT
-} from '../types';
+} from './types';
 
 export default (state, action) => {
   switch (action.type) {
