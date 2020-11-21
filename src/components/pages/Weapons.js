@@ -34,7 +34,7 @@ const Weapons = () => {
     }
 
     return (
-        <ListContainer inputPlaceholder="Search for a weapon..." sorted={true}>
+        <ListContainer inputPlaceholder="Search for a weapon..." sorted={true} header="Weapons">
             {weapons && weapons.map((weapon) => <ListItem text={weapon.name} url={`/weapons/desc/${weapon.slug}`} key={uuid()} />)}
         </ListContainer>
     )

@@ -37,7 +37,7 @@ const Spells = () => {
   }
 
   return (
-   <ListContainer>
+   <ListContainer inputPlaceholder="Search for a spell..." header="Spells">
       {spells && spells.map((spell) => <ListItem text={spell.name} url={`/spells/desc/${spell.slug}`} key={uuid()} />)}
    </ListContainer>
   );
