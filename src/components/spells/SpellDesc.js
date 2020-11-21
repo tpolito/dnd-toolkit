@@ -1,8 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import Preloader from '../layout/Preloader';
 
-import data from '../data/Spells.json';
-
 const SpellDesc = ({ match, history }) => {
   const slug = match.params.slug;
     // On Page Load

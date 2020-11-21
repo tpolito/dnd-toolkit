@@ -13,7 +13,6 @@ const Weapons = () => {
 
     let [weapons, setWeapons] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [searchString, setSearchString] = useState('');
 
     const myHeaders = {
         "Content-Type": "application/json"
@@ -28,16 +27,6 @@ const Weapons = () => {
         const data = await res.json();
         setWeapons(data.results);
         setLoading(false);
-    }
-
-    const handleChange = e => {
-        setSearchString(e.target.value);
-      };
-
-    if (searchString.length > 0) {
-        weapons = weapons.filter((i) => {
-          return i.name.toLowerCase().match(searchString.toLowerCase());
-        });
     }
 
     if(loading) {

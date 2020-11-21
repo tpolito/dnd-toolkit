@@ -7,6 +7,7 @@ const WeaponDesc = ({match, history}) => {
     useEffect(() => {
         getWeapon(slug);
         document.title = 'Spell Description';
+    //eslint-disable-next-line
     }, []);
 
     // State
