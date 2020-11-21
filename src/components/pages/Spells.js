@@ -1,41 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import Preloader from '../layout/Preloader';
-import SpellItem from '../spells/SpellItem';
-import data from '../data/Spells.json';
 import uuid from 'uuid';
+import ListContainer from '../layout/Lists/ListContainer'
+import ListItem from '../layout/Lists/ListItem'
 
 const Spells = () => {
   // On Page Load
   useEffect(() => {
-    getLocalSpells();
+    getSpells();
     document.title = 'Spell List';
     //eslint-disable-next-line
   }, []);
 
   // State
-  const [spells, setSpells] = useState({});
+  const [spells, setSpells] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [searchString, setSearchString] = useState('');
 
-  // Deconstructing
-  let { results } = spells;
+  const myHeaders = {
+    "Content-Type": "application/json"
+  };
 
-  // Get spells from local JSON file
-  async function getLocalSpells() {
+  async function getSpells() {
     setLoading(true);
-    setSpells(data);
+    const res = await fetch("https://api.open5e.com/spells/?limit=321", {
+        method: "GET",
+        headers: myHeaders
+      });
+    const data = await res.json();
+    setSpells(data.results);
     setLoading(false);
-  };
-
-  // Filter Input
-  const handleChange = (e) => {
-    setSearchString(e.target.value);
-  };
-
-  if (searchString.length > 0) {
-    results = results.filter((i) => {
-      return i.name.toLowerCase().match(searchString.toLowerCase());
-    });
   }
 
   // Render checking
@@ -44,18 +37,9 @@ const Spells = () => {
   }
 
   return (
-    <ul className='collection with-header'>
-      <li className='collection-header'>
-        <h4 className='center'>Spell List</h4>
-        <input
-          type='text'
-          placeholder='Search for a spell'
-          onChange={handleChange}
-        />
-      </li>
-      {results &&
-        results.map((spell) => <SpellItem spell={spell} key={uuid()} />)}
-    </ul>
+   <ListContainer>
+      {spells && spells.map((spell) => <ListItem text={spell.name} url="" key={uuid()} />)}
+   </ListContainer>
   );
 };
 
