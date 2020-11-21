@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
-import { getChildByFilter } from '../../../utils/utils'
+import PropTypes from 'prop-types'
+import { getChildByFilter, getChildByFilterAndSort } from '../../../utils/utils'
 
-function ListContainer({children, inputPlaceholder}) {
+function ListContainer({children, inputPlaceholder, sorted}) {
     const [searchString, setSearchString] = useState("")
 
     const handleChange = (e) => {
         setSearchString(e.target.value);
     };
+
+    console.log(children)
 
     return (
         <div className="w-11/12 mx-auto bg-white">
@@ -18,12 +21,16 @@ function ListContainer({children, inputPlaceholder}) {
                 />
             </div>
             <ul>
-                {getChildByFilter(children, searchString)}
+                {sorted ? getChildByFilterAndSort(children, searchString) : getChildByFilter(children, searchString)}
             </ul>
         </div>
     )
 }
 
-
+ListContainer.propTypes = {
+    children: PropTypes.node.isRequired,
+    inputPlaceholder: PropTypes.string.isRequired,
+    sorted: PropTypes.bool,
+  };
 
 export default ListContainer

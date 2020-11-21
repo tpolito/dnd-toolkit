@@ -41,7 +41,7 @@ const App = () => {
                 <Route exact path='/conditions' component={Conditions} />
                 <Route exact path='/npc-gen' component={NPCGen} />
                 <Route exact path='/spells/' component={Spells} />
-                <Route exact path='/spells/desc/:id' component={SpellDesc} />
+                <Route exact path='/spells/desc/:slug' component={SpellDesc} />
                 <Route exact path='/weapons/' component={Weapons} />
                 <Route exact path='/weapons/desc/:slug' component={WeaponsDesc} />
             </div>

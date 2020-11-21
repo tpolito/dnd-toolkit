@@ -4,24 +4,33 @@ import Preloader from '../layout/Preloader';
 import data from '../data/Spells.json';
 
 const SpellDesc = ({ match, history }) => {
-  // On Page Load
-  useEffect(() => {
-    getLocalSpell(match.params.id);
-    document.title = 'Spell Description';
-    // eslint-disable-next-line
-  }, []);
+  const slug = match.params.slug;
+    // On Page Load
+    useEffect(() => {
+        getSpell(slug);
+        document.title = 'Spell Description';
+    //eslint-disable-next-line
+    }, []);
 
-  // State
-  const [spell, setSpell] = useState({});
-  const [loading, setLoading] = useState(false);
+    // State
+    const [spell, setSpell] = useState({});
+    const [loading, setLoading] = useState(false);
 
-  const getLocalSpell = async (id) => {
-    setLoading(true);
+    const myHeaders = {
+        "Content-Type": "application/json"
+    };
 
-    setSpell(data.results[id - 1]);
+    const getSpell = async (slug) => {
+        setLoading(true);
+        const res = await fetch(`https://api.open5e.com/spells/${slug}`, {
+            method: "GET",
+            headers: myHeaders
+          });
+        const data = await res.json();
+        setSpell(data);
 
-    setLoading(false);
-  };
+        setLoading(false);
+    };
 
   // Destructuring
   const {
@@ -130,7 +139,7 @@ const SpellDesc = ({ match, history }) => {
             </p>
             <p>
               <strong>Components: </strong>
-              {components && components.map((component) => component)}
+              {components}
             </p>
           </div>
 

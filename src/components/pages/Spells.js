@@ -38,7 +38,7 @@ const Spells = () => {
 
   return (
    <ListContainer>
-      {spells && spells.map((spell) => <ListItem text={spell.name} url="" key={uuid()} />)}
+      {spells && spells.map((spell) => <ListItem text={spell.name} url={`/spells/desc/${spell.slug}`} key={uuid()} />)}
    </ListContainer>
   );
 };

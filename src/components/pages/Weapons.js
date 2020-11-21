@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Preloader from '../layout/Preloader';
 import uuid from 'uuid';
-import WeaponItem from '../weapons/WeaponItem'
+import ListContainer from '../layout/Lists/ListContainer'
+import ListItem from '../layout/Lists/ListItem'
 
 const Weapons = () => {
     useEffect(() => {
@@ -44,18 +45,9 @@ const Weapons = () => {
     }
 
     return (
-        <ul className='collection with-header'>
-            <li className='collection-header'>
-                <h4 className='center'>Weapon List List</h4>
-                <input
-                type='text'
-                placeholder='Search for a spell'
-                onChange={handleChange}
-                />
-            </li>
-            {weapons &&
-                weapons.map((weapon) => <WeaponItem weapon={weapon} key={uuid()} />)}
-    </ul>
+        <ListContainer inputPlaceholder="Search for a weapon..." sorted={true}>
+            {weapons && weapons.map((weapon) => <ListItem text={weapon.name} url={`/weapons/desc/${weapon.slug}`} key={uuid()} />)}
+        </ListContainer>
     )
 }
 
