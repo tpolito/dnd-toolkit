@@ -10699,6 +10699,18 @@ video {
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.font-main {
+  font-family: Fire Sans, sans-serif;
+}
+
+.font-secondary {
+  font-family: Rubik, sans-serif;
+}
+
+.font-tert {
+  font-family: Kreon, serif;
+}
+
 .font-hairline {
   font-weight: 100;
 }
@@ -29853,6 +29865,18 @@ video {
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .xl\:font-main {
+    font-family: Fire Sans, sans-serif;
+  }
+
+  .xl\:font-secondary {
+    font-family: Rubik, sans-serif;
+  }
+
+  .xl\:font-tert {
+    font-family: Kreon, serif;
+  }
+
   .xl\:font-hairline {
     font-weight: 100;
   }
@@ -48975,6 +48999,18 @@ video {
 
   .lg\:font-mono {
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .lg\:font-main {
+    font-family: Fire Sans, sans-serif;
+  }
+
+  .lg\:font-secondary {
+    font-family: Rubik, sans-serif;
+  }
+
+  .lg\:font-tert {
+    font-family: Kreon, serif;
   }
 
   .lg\:font-hairline {
@@ -68101,6 +68137,18 @@ video {
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .md\:font-main {
+    font-family: Fire Sans, sans-serif;
+  }
+
+  .md\:font-secondary {
+    font-family: Rubik, sans-serif;
+  }
+
+  .md\:font-tert {
+    font-family: Kreon, serif;
+  }
+
   .md\:font-hairline {
     font-weight: 100;
   }
@@ -87223,6 +87271,18 @@ video {
 
   .sm\:font-mono {
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .sm\:font-main {
+    font-family: Fire Sans, sans-serif;
+  }
+
+  .sm\:font-secondary {
+    font-family: Rubik, sans-serif;
+  }
+
+  .sm\:font-tert {
+    font-family: Kreon, serif;
   }
 
   .sm\:font-hairline {

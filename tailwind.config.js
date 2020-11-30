@@ -10,6 +10,11 @@ module.exports = {
           'tert': '#007FFF',
           'accent': '#FCF7FF'
 
+        },
+        fontFamily: {
+          'main': ['Fire Sans', 'sans-serif'],
+          'secondary': ['Rubik', 'sans-serif'],
+          'tert': ['Kreon', 'serif']
         }
       },
       screens: {

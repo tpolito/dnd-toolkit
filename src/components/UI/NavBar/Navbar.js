@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between items-center bg-orange-200 shadow-md">
       {/* TODO: Make this an svg/image instead of text */}
-      <a href="/" className="font-semibold p-5 text-black">DnD Toolkit</a>
+      <a href="/" className="font-semibold p-5 text-black font-main">DnD Toolkit</a>
       <ul className="flex m-0 p-0 list-none h-full">
         <NavItemDropdown link="/" text="Tools" dropdown={toolsDropdown} />
         <NavItemDropdown link="/" text="References" dropdown={refDropdown} />

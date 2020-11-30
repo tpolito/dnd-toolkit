@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 function ListItem({text, url}) {
     return (
-        <li className="bg-blue-300 border-b border-solid border-black py-2 px-10 hover:text-red-600">
+        <li className="font-secondary bg-secondary border-b border-solid border-main py-2 px-10 hover:text-white">
            <a href={url}>{text}</a>
         </li>
     )
